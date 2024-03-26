@@ -1,89 +1,84 @@
-# Multi-threaded Video Length Calculator
-
-![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
-![License](https://img.shields.io/github/license/hack505/multi-threaded-video-calculator)
-
-Efficiently calculate the total length of video files in a directory and its subfolders using Python. This multi-threaded script leverages the moviepy library for video analysis, providing faster processing times for collections of video files. Enhance your video management tasks with this utility.
+# DurationSense-NG
+Unlock the power of video insights with DurationSense - your ultimate tool for analyzing and understanding video durations effortlessly. Whether you're managing a collection of videos or need precise duration data for your projects, DurationSense-NG empowers you with powerful insights to make informed decisions.
 
 ## Table of Contents
-
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
 - [Usage](#usage)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Running the Script](#running-the-script)
-- [Configuration](#configuration)
-- [Notes](#notes)
-- [Contributing](#contributing)
+- [Contributions](#contributions)
+- [Credits](#credits)
 - [License](#license)
+
+## Features
+
+- **Efficient Video Analysis:** Utilizes MoviePy library for fast and reliable video duration calculation.
+- **Multi-format Support:** Works seamlessly with popular video formats including MP4, AVI, MKV, MOV, WMV, FLV, and more.
+- **Recursive Scanning**: Option to scan subdirectories recursively for comprehensive video duration analysis.
+- **Multiprocessing:** Harnesses the power of multiprocessing to process multiple videos simultaneously, optimizing performance.
+
+## Installation
+
+1 - Clone this repository to your local machine.
+
+```bash
+git clone https://github.com/hack505/DurationSense-NG.git
+
+```
+
+2 - Navigate to the project directory.
+
+```bash
+cd DurationSense-NG
+```
+
+3 - Install the required dependencies.
+
+```bash
+pip install -r requirements.txt
+
+```
 
 ## Usage
 
-### Prerequisites
+DurationSense-NG offers flexible options through command-line arguments for customizing your video duration analysis:
 
-Make sure you have Python 3.x installed on your system.
-
-### Installation
-
-You'll need to install the `moviepy` library if you haven't already. You can install it using the following command:
+**-d, --directory:** Specify the directory containing video files. Default is the current working directory.
 
 ```bash
-pip install moviepy
-  ```
-
-
-## Running the Script
-
-Clone the project
-
-```bash
-  git clone https://github.com/hack505/Python-Video-Duration-Analyzer-Multi-threaded.git
+python duration_sense_ng.py -d /path/to/videos/directory
 ```
 
-Go to the project directory
+**-f, --formats:** Define the video formats/extensions to consider during duration calculation. Default includes common formats like MP4, AVI, MKV, MOV, WMV, FLV, and more.
 
 ```bash
-  cd Python-Video-Duration-Analyzer-Multi-threaded
+python duration_sense_ng.py -f .mp4 .avi .mkv -d /path/to/videos/directory 
 ```
-__*before Running*__
 
-Navigate to the repository's directory.
-Replace `"/path/to/your/course/folder"` in the script with the actual path to the folder containing your videos.
-
-
-
-Run the code
+**-e, --exclude:** Exclude specific file extensions from duration calculation. Useful for skipping irrelevant files.
 
 ```bash
-  python video_length_calculator.py
+python duration_sense_ng.py -e .wmv .flv -d /path/to/videos/directory
 ```
 
+**-l, --log-level:** Set the logging level for detailed output. Options include DEBUG, INFO, WARNING, ERROR, CRITICAL. Default is INFO.
 
-## Configuration
+```bash
+python duration_sense_ng.py -l DEBUG -d /path/to/videos/directory
+```
 
-__Supported video formats (add or remove formats as needed)__
+Customize these arguments based on your specific requirements to get precise video duration information and detailed logs.
 
-video_formats = [".mp4", ".avi", ".mkv", ".mov", ".wmv", ".flv", ".webm", ".mpeg", ".3gp", ".ogg"]
+## Contributions
 
-You can modify the video_formats list in the script to include additional formats if needed.
+Contributions to DurationSense-NG are welcome! Feel free to fork the repository, make improvements, and submit pull requests to enhance its functionality.
 
-## Notes
+## Credits
 
-- Multi-threading allows the script to utilize your CPU's cores more efficiently, providing faster processing times for video length calculations.
-- Keep in mind that the script's execution time depends on the number and length of video files in the specified folder.
-- Make sure not to include sensitive paths or information in your code or repository.
-
-
-
-
-## Contributing
-
-Contributions are welcome! If you have suggestions, improvements, or bug fixes, feel free to [open an issue](https://github.com/hack505/multi-threaded-video-calculator/issues) or [submit a pull request](https://github.com/hack505/multi-threaded-video-calculator/pulls).
-
-
-
-
+- **MoviePy:** Used for video duration calculation and processing.
+- **tqdm:** Provides a progress bar for visual feedback during video processing.
+- **multiprocessing**: Utilized for parallel processing of video files, improving performance.
 
 ## License
 
-[MIT](https://github.com/hack505/Python-Video-Duration-Analyzer-Multi-threaded/blob/main/LICENSE)
-
+This project is licensed under the [MIT](https://github.com/hack505/Python-Video-Duration-Analyzer-Multi-threaded/blob/main/LICENSE) License - see the LICENSE file for details.
