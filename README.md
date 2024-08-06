@@ -1,7 +1,9 @@
 # DurationSense-NG
+
 Unlock the power of video insights with DurationSense - your ultimate tool for analyzing and understanding video durations effortlessly. Whether you're managing a collection of videos or need precise duration data for your projects, DurationSense-NG empowers you with powerful insights to make informed decisions.
 
 ## Table of Contents
+
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
@@ -18,6 +20,16 @@ Unlock the power of video insights with DurationSense - your ultimate tool for a
 - **Multiprocessing:** Harnesses the power of multiprocessing to process multiple videos simultaneously, optimizing performance.
 
 ## Installation
+
+### PyPl
+
+I have recently made a PyPl account to make you life easier!
+
+```bash
+pip install durationsense
+```
+
+### Clone
 
 1 - Clone this repository to your local machine.
 
@@ -52,7 +64,7 @@ python duration_sense_ng.py -d /path/to/videos/directory
 **-f, --formats:** Define the video formats/extensions to consider during duration calculation. Default includes common formats like MP4, AVI, MKV, MOV, WMV, FLV, and more.
 
 ```bash
-python duration_sense_ng.py -f .mp4 .avi .mkv -d /path/to/videos/directory 
+python duration_sense_ng.py -f .mp4 .avi .mkv -d /path/to/videos/directory
 ```
 
 **-e, --exclude:** Exclude specific file extensions from duration calculation. Useful for skipping irrelevant files.
